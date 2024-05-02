@@ -1,58 +1,31 @@
-Contribution: 2024-02-12 18:00
+# Real Estate NFT DApp
 
-Contribution: 2024-02-12 18:01
+## Technology Stack & Tools
 
-Contribution: 2024-02-13 18:00
+- Solidity (Writing Smart Contracts & Tests)
+- Javascript (React & Testing)
+- [Hardhat](https://hardhat.org/) (Development Framework)
+- [Ethers.js](https://docs.ethers.io/v5/) (Blockchain Interaction)
+- [React.js](https://reactjs.org/) (Frontend Framework)
 
-Contribution: 2024-02-13 18:01
+## Requirements For Initial Setup
+- Install [NodeJS](https://nodejs.org/en/)
 
-Contribution: 2024-02-15 18:00
+## Setting Up
+### 1. Clone/Download the Repository
 
-Contribution: 2024-02-16 18:00
+### 2. Install Dependencies:
+`$ npm install`
 
-Contribution: 2024-02-17 18:00
+### 3. Run tests
+`$ npx hardhat test`
 
-Contribution: 2024-02-17 18:01
+### 4. Start Hardhat node
+`$ npx hardhat node`
 
-Contribution: 2024-02-29 18:00
+### 5. Run deployment script
+In a separate terminal execute:
+`$ npx hardhat run ./scripts/deploy.js --network localhost`
 
-Contribution: 2024-03-03 18:00
-
-Contribution: 2024-03-10 18:00
-
-Contribution: 2024-03-10 18:01
-
-Contribution: 2024-03-10 18:02
-
-Contribution: 2024-03-14 18:00
-
-Contribution: 2024-03-14 18:01
-
-Contribution: 2024-03-14 18:02
-
-Contribution: 2024-03-15 18:00
-
-Contribution: 2024-03-16 18:00
-
-Contribution: 2024-03-16 18:01
-
-Contribution: 2024-03-18 18:00
-
-Contribution: 2024-03-20 18:00
-
-Contribution: 2024-03-20 18:01
-
-Contribution: 2024-03-20 18:02
-
-Contribution: 2024-03-21 18:00
-
-Contribution: 2024-03-21 18:01
-
-Contribution: 2024-03-21 18:02
-
-Contribution: 2024-03-22 18:00
-
-Contribution: 2024-03-22 18:01
-
-Contribution: 2024-03-22 18:02
-
+### 7. Start frontend
+`$ npm run start`

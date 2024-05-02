@@ -1,0 +1,301 @@
+@font-face {
+  font-family: principal;
+  src: url(./assets/GABRWFFR.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(150, 78, 216);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------------------------------------------ */
+/* -- NAVIGATION -- */
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  font-family: principal;
+}
+
+.nav__brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav__brand img {
+  max-width: 125px;
+  height: auto;
+}
+
+.nav__brand h1 {
+  color:rgba(234, 227, 22, 0.7);
+  font-size: 2.5em;
+  font-weight: 500;
+}
+
+.nav__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__links li {
+  margin: 0 15px;
+  border-color: black;
+}
+
+.nav__connect {
+  width: 175px;
+  height: 50px;
+  margin: 0 auto;
+
+  background-color: rgba(234, 227, 22, 0.7);
+  color: rgb(103, 13, 115);
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: principal;
+  font-size: 1.10em;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.nav__connect:hover {
+  background-color: rgb(103, 13, 115);
+  color:rgba(234, 227, 22, 0.7)
+}
+
+/* ------------------------------------------------------ */
+/* -- HEADER -- */
+
+/* header {
+  background-image: url("/");
+  background-position: center;
+  background-size: cover;
+  min-height: 40vh;
+
+  position: relative;
+} */
+
+/* ------------------------------------------------------ */
+/* -- CARDS -- */
+
+.cards__section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cards__section h3 {
+  display: flex;
+  justify-content: center;
+  color:  white;
+  font-family: principal;
+  font-weight: 200;
+  font-size: x-large;
+  margin: 50px 0 20px;
+}
+
+.cards {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  margin-top: 20px;
+}
+
+.card {
+  width: 350px;
+  height: 275px;
+
+  border: 1px solid var(--clr-black);
+  margin: 10px auto;
+
+  cursor: pointer;
+  position: relative;
+
+  transition: all 250ms ease;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 5px var(--clr-grey);
+}
+
+.card__image {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.card__image img {
+  max-width: 100%;
+}
+
+.card__info {
+  width: 100%;
+  height: 45%;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.card__info h4 {
+  font-family: principal;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.card__info p {
+  font-family: principal;
+  font-size: 0.90em;
+  margin-top: 5px;
+}
+
+/* ------------------------------------------------------ */
+/* -- HOMES -- */
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home__details {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  align-items: center;
+
+  width: 80%;
+  height: 70%;
+  margin: 0 auto;
+  padding: 20px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.home__image {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.home__image img {
+  max-width: 100%;
+}
+
+.home__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.home__close img {
+  width: 25px;
+  height: 25px;
+}
+
+.home__overview {
+  height: 100%;
+  margin: 0 20px;
+  padding-right: 40px;
+
+  overflow-y: scroll;
+}
+
+.home__overview h1,
+.home__overview h2,
+.home__overview hr {
+  margin: 10px auto;
+}
+
+.home__overview ul {
+  margin-left: 40px;
+}
+
+.home__buy,
+.home__contact,
+.home__owned {
+  margin: 20px 5px;
+  border: none;
+  border-radius: 4px;
+  font-family: principal;
+  font-size: 1.10em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.home__buy {
+  width: 225px;
+  height: 50px;
+}
+
+/* .home__buy:hover {
+  background-color: var(--clr-blue-2);
+} */
+
+.home__contact {
+  width: 150px;
+  height: 50px;
+
+  /* background-color: transparent; */
+  color: var(--clr-blue);
+
+  border: 1px solid var(--clr-blue);
+}
+
+.home__contact:hover {
+  /* background-color: #f7f7f7; */
+  color: var(--clr-blue-2);
+}
+
+.home__owned {
+  height: 50px;
+  /* background-color: var(--clr-green); */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav__links {
+    display: none;
+  }
+}

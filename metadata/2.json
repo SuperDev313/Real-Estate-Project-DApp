@@ -1,0 +1,33 @@
+{
+    "name": "Chandler & Joey's Apartment",
+    "address": "545 Grove Street, New York, Number 19",
+    "description": "To play videogames and eat chips",
+    "image": "https://bafybeidnycn4jvvm4as5v7okhkufpbwn77on25arcksr6vrsxm43netuuy.ipfs.nftstorage.link/images/chandlerandjoey.JPG",
+    "id": "2",
+    "attributes": [
+        {
+            "trait_type": "Purchase Price",
+            "value": 15
+        },
+        {
+            "trait_type": "Type of Residence",
+            "value": "Apartment"
+        },
+        {
+            "trait_type": "Bed Rooms",
+            "value": 2
+        },
+        {
+            "trait_type": "Bathrooms",
+            "value": 1
+        },
+        {
+            "trait_type": "Square Feet",
+            "value": 3979
+        },
+        {
+            "trait_type": "Year Built",
+            "value": 2005
+        }
+    ]
+}

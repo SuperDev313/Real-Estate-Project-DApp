@@ -1,0 +1,33 @@
+{
+    "name": "Monica's Apartment",
+    "address": "545 Grove Street, New York, Number 20",
+    "description": "To reunite all friends",
+    "image": "https://bafybeidnycn4jvvm4as5v7okhkufpbwn77on25arcksr6vrsxm43netuuy.ipfs.nftstorage.link/images/monica.jpg",
+    "id": "1",
+    "attributes": [
+        {
+            "trait_type": "Purchase Price",
+            "value": 20
+        },
+        {
+            "trait_type": "Type of Residence",
+            "value": "Flat"
+        },
+        {
+            "trait_type": "Bed Rooms",
+            "value": 2
+        },
+        {
+            "trait_type": "Bathrooms",
+            "value": 1
+        },
+        {
+            "trait_type": "Square Feet",
+            "value": 2200
+        },
+        {
+            "trait_type": "Year Built",
+            "value": 2013
+        }
+    ]
+}

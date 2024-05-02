@@ -1,0 +1,33 @@
+{
+    "name": "Central Perk",
+    "address": "199 Lafayette St., New York",
+    "description": "Coffee shop",
+    "image": "https://bafybeidnycn4jvvm4as5v7okhkufpbwn77on25arcksr6vrsxm43netuuy.ipfs.nftstorage.link/images/centralperk.webp",
+    "id": "3",
+    "attributes": [
+        {
+            "trait_type": "Purchase Price",
+            "value": 10
+        },
+        {
+            "trait_type": "Type of Residence",
+            "value": "Commerce"
+        },
+        {
+            "trait_type": "Bed Rooms",
+            "value": 0
+        },
+        {
+            "trait_type": "Bathrooms",
+            "value": 2
+        },
+        {
+            "trait_type": "Square Feet",
+            "value": 2202
+        },
+        {
+            "trait_type": "Year Built",
+            "value": 1995
+        }
+    ]
+}
