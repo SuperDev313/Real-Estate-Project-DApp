@@ -1,35 +1,46 @@
 //SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
-pragma solidity ^0.8.0
 
 interface IERC721 {
-    function transferFrom {
+    function transferFrom(
         address _from,
         address _to,
         uint256 _id
-    } external;
+    ) external;
 }
 
-contract Escrow {
+contract Escrow{
     address public nftAddress;
     address payable public seller;
     address public inspector;
     address public lender;
 
-    modifier onlyInspector() {
-        require(msg.sender == inspector, "Only inspector call this method");
-        _;
-    }
+	// modifier onlyInspector => verify for "Only inspector call this method"
+	modifier onlyInspector() {
+		require(msg.sender == inspector, "Only inspector call this method");
+		_;
+	}
 
+ 	// modifier onlyBuyer => verify for "Only buyer call this method"
 	modifier onlyBuyer(uint256 _nftID){
         require(msg.sender == buyer[_nftID], "Only buyer call this method");
         _;
     }
 
-    modifier onlySeller() {
-        require(msg.sender == seller, "Only seller call this method");
-        _;
-    }
+	// modifier onlySeller => verify for "Only seller call this method"
+	modifier onlySeller(){
+	require(msg.sender == seller, "Only seller call this method");
+	_;
+	}  
+    
+    
+	mapping (uint256 => bool)  public isListed; 
+	mapping(uint256 => uint256)  public purchasePrice;
+	mapping(uint256 => uint256)  public escrowAmount;
+	mapping(uint256 => address)  public buyer;
+	mapping(uint256 => bool)  public inspectionPassed;
+	mapping(uint256 => mapping(address => bool)) public approval;
 
     constructor(address _nftAddress, address payable _seller, address _inspector, address _lender) {
         nftAddress = _nftAddress;
@@ -57,8 +68,9 @@ contract Escrow {
     function updateInspectionStatus (uint256 _nftID, bool _passed) public onlyInspector {
         inspectionPassed[_nftID] = _passed;
     }
+    
 
-        // Approve Sale
+    // Approve Sale
     function approveSale (uint256 _nftID) public{
 		approval[_nftID][msg.sender] = true;
     }
@@ -80,8 +92,8 @@ contract Escrow {
 
         IERC721(nftAddress).transferFrom(address(this), buyer[_nftID], _nftID);
 	}
-
-        // Cancel Sale (handle earnest deposit) if inspection status is not approved, then refund, otherwise send to seller
+    
+    // Cancel Sale (handle earnest deposit) if inspection status is not approved, then refund, otherwise send to seller
     function cancelSale (uint256 _nftID) public{
 		if(!inspectionPassed[_nftID]){
 		    payable(buyer[_nftID]).transfer(address(this).balance);
@@ -99,5 +111,4 @@ contract Escrow {
     function getBalance() public view returns (uint256) {        
 		return address(this).balance;
 	}
-    
 }
