@@ -15,4 +15,9 @@ contract Escrow {
     address payable public seller;
     address public inspector;
     address public lender;
+
+    modifier onlyInspector() {
+        require(msg.sender == inspector, "Only inspector call this method");
+        _;
+    }
 }
