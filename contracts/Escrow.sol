@@ -20,9 +20,14 @@ contract Escrow {
         require(msg.sender == inspector, "Only inspector call this method");
         _;
     }
-    
+
 	modifier onlyBuyer(uint256 _nftID){
         require(msg.sender == buyer[_nftID], "Only buyer call this method");
+        _;
+    }
+
+    modifier onlySeller() {
+        require(msg.sender == seller, "Only seller call this method");
         _;
     }
 }
